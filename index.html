@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bryan's Portfolio</title>
+ <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <!-- // website background -->
+  <div class="background">
+
+ <!-- // navigation buttons -->
+  <div class="nav">
+      <a class="a ac" href="#">HOME</a>
+      <a class="b" href="#">ABOUT ME</a>
+      <a class="c" href="#">PROJECTS</a>
+      <a class="d" href="#">CONTACT ME</a>
+  </div>
+
+  <!-- //front page -->
+  <div class="home">
+  		<h1>Bryan Brathwaite.</h1>
+  		<h2> Computer Science Major</h2>
+  	</div>
+
+     <!-- //about me section -->
+  	<div class="aboutme">
+  	<p><b>Hello I'm Bryan,</b><br> a Brooklyn College student, majoring in Computer Science. Welcome to my website!<br> Im currently working to become a front end developer in order to build quality websites and apps for those I work for. </p>
+  	</div>
+
+    // where i post my projects
+  	<div class="myimage">
+  		<img src="images/1.jpg">
+  	</div>
+
+     <!-- // in order to contact me -->
+  	<div class="contactme">
+  	<form method="post" action="">
+  		<input type="text" name="" placeholder="Name" required="" value="First Name">
+  		<input type="text" name="" placeholder="Email" value="Your Email">
+  		<textarea cols="8" rows="6" placeholder="Message">Your Message...</textarea>
+  		<input type="submit" name="" value="Submit">
+  		</form>
+  	</div>
+  </div>
+
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+
+  	$('a').click(function(){
+  		var mythis = $(this);
+  		$('a').removeClass('active');
+  		$(mythis).addClass('active');
+  	});
+
+  	// ABOUT ME
+  	$('a:nth-child(1)').click(function(){
+  		$('.home').fadeIn('slow');
+  	});
+  	$('a:nth-child(2),a:nth-child(3),a:nth-child(4)').click(function(){
+  		$('.home').fadeOut('fast')
+  	});
+
+  	// about me
+  	$('a:nth-child(2)').click(function(){
+  		$('.aboutme').fadeIn('slow');
+  	});
+  	$('a:nth-child(1),a:nth-child(3),a:nth-child(4)').click(function(){
+  		$('.aboutme').fadeOut('fast')
+  	});
+
+  	// projects
+  	$('a:nth-child(3)').click(function(){
+  		$('.myimage').fadeIn('slow')
+  	});
+  	$('a:nth-child(1),a:nth-child(2),a:nth-child(4)').click(function(){
+  		$('.myimage').fadeOut('fast')
+  	});
+
+  	// projects
+  	$('a:nth-child(4)').click(function(){
+  		$('.contactme').fadeIn('slow')
+  	});
+  	$('a:nth-child(3),a:nth-child(2),a:nth-child(1)').click(function(){
+  		$('.contactme').fadeOut('fast')
+  	});
+
+
+  	// var active = '.active';
+  	// var $a = $('a').click(function(e) {
+  	// 		$a.removeClass(active);
+  	// 		$(this).addClass(active);
+  	// 	});
+
+
+  });
+  </script>
+  </body>
