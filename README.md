@@ -1,2 +1,2 @@
 # Personal-Site
-Online Portfolio using HTML and CSS
+My online portfolio using HTML and CSS
